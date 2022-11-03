@@ -25,10 +25,14 @@ public class LibraryManagement {
         
 
          else if(str.equals(b)){
+             Authors authors = new Authors();
+             authors.list();
 
                    }
 
         else if(str.equals(c)){
+            YearOfPublication yop = new YearOfPublication();
+            yop.list();
 
                    }
 
