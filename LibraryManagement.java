@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class LibraryManagement {
@@ -7,6 +9,7 @@ public class LibraryManagement {
         String a = new String("Genre");
         String b = new String("Authors");
         String c = new String("Year of Publication");
+        String d = new String("Mark Mason");
          
 
          System.out.println("Enter your choice  from the option below");
@@ -21,6 +24,10 @@ public class LibraryManagement {
          if(str.equals(a)){
              Genre genre = new Genre();
              genre.list();
+
+             String gen= sc.nextLine();
+
+
          }
         
 
@@ -28,11 +35,19 @@ public class LibraryManagement {
              Authors authors = new Authors();
              authors.list();
 
+             String aut= sc.nextLine();
+
+             if (aut.equals(d)){
+                 Authors.getBooksByAuthor1();
+             }
+
                    }
 
         else if(str.equals(c)){
             YearOfPublication yop = new YearOfPublication();
             yop.list();
+
+            String yp= sc.nextLine();
 
                    }
 
