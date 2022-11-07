@@ -1,6 +1,8 @@
 import java.util.*;
 
 public class Authors {
+
+    static Map<String, List<String>> map = new HashMap<String, List<String>>();
     public void list() {
         System.out.println("Mark Mason");
         System.out.println("Dan Brown");
@@ -10,8 +12,8 @@ public class Authors {
 
 
     }
-    public static void getBooksByAuthor1(){
-    Map<String, List<String>> map = new HashMap<String, List<String>>();
+    public static  void getBooksByAuthor1(){
+    
     List<String> books1 = new ArrayList<String>();
     books1.add("Love Is Not Enough");
     books1.add("The Subtle Art of Not Giving a fuck");
@@ -20,21 +22,66 @@ public class Authors {
 
     
     Object value=map.get("key1");
-    List<Object> list = new ArrayList<Object>();
-    list.add(value);
-    System.out.println(list);
+    List<Object> listofbook = new ArrayList<Object>();
+    listofbook.add(value);
+    System.out.println(listofbook);
     
     
     }
 
 
-    public void getBooksByAuthor2(){
-    Map<String, List<String>> map = new HashMap<String, List<String>>();
+    public static void getBooksByAuthor2(){
+    
     List<String> books2 = new ArrayList<String>();
-    books2.add("");
+    books2.add("DA VINCI CODE");
+    books2.add("Inferno");
+    books2.add("Origin");
+    books2.add("Deception point");
+    map.put("key2",books2);
 
+    Object value=map.get("key2");
+    List<Object> listbook = new ArrayList<Object>();
+    listbook.add(value);
+    System.out.println(listbook);
 
     }
+
+    public static void getBooksByAuthor3(){
+        List<String> books3 = new ArrayList<String>();
+        books3.add("The Power of Unwavering");
+        map.put("key3",books3);
+    
+        Object value=map.get("key3");
+        List<Object> listbook = new ArrayList<Object>();
+        listbook.add(value);
+        System.out.println(listbook);
+    
+        }
+
+        public static void getBooksByAuthor4(){
+            List<String> books4 = new ArrayList<String>();
+            books4.add("Berserk");
+            map.put("key4",books4);
+        
+            Object value=map.get("key4");
+            List<Object> listbook = new ArrayList<Object>();
+            listbook.add(value);
+            System.out.println(listbook);
+        
+            }
+
+
+            public static void getBooksByAuthor5(){
+                List<String> books5 = new ArrayList<String>();
+                books5.add("The Power of Unwavering");
+                map.put("key3",books5);
+            
+                Object value=map.get("key5");
+                List<Object> listbook = new ArrayList<Object>();
+                listbook.add(value);
+                System.out.println(listbook);
+            
+                }
 
     
 }

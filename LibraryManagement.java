@@ -10,6 +10,10 @@ public class LibraryManagement {
         String b = new String("Authors");
         String c = new String("Year of Publication");
         String d = new String("Mark Mason");
+        String e = new String("Dan Brwon");
+        String f = new String("Dandapani");
+        String g = new String("Kentaro Muira");
+
          
 
          System.out.println("Enter your choice  from the option below");
@@ -39,6 +43,25 @@ public class LibraryManagement {
 
              if (aut.equals(d)){
                  Authors.getBooksByAuthor1();
+             }
+
+             else if (aut.equals(e)){
+                 Authors.getBooksByAuthor2();
+             }
+
+             else if (aut.equals(f)){
+                Authors.getBooksByAuthor3();
+            }
+
+             else if (aut.equals(f)){
+                Authors.getBooksByAuthor4();
+            }
+
+             else if (aut.equals(f)){
+                Authors.getBooksByAuthor5();
+            }
+             else {
+                 System.out.println("Invalid author entered ,try again");
              }
 
                    }
