@@ -74,8 +74,6 @@ public class LibraryManagement {
             YearOfPublication yop = new YearOfPublication();
             yop.list();
 
-            String yp= sc.nextLine();
-
             yop.getStringList();
 
 
