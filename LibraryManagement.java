@@ -4,7 +4,11 @@ import java.util.Scanner;
 
 public class LibraryManagement {
          
-     public static void main(String[] args) {
+     
+
+    public static Object yp;
+
+    public static void main(String[] args) {
 
         String a = new String("Genre");
         String b = new String("Authors");
@@ -71,6 +75,9 @@ public class LibraryManagement {
             yop.list();
 
             String yp= sc.nextLine();
+
+            yop.getStringList();
+
 
                    }
 
