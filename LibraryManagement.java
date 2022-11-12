@@ -33,8 +33,7 @@ public class LibraryManagement {
              Genre genre = new Genre();
              genre.list();
 
-             String gen= sc.nextLine();
-
+             genre.getStringList();
 
          }
         
