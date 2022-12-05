@@ -34,6 +34,18 @@ public class LibraryManagement {
              genre.list();
 
              genre.getStringList();
+             System.out.println("Do you want to add  books to this genre:type y or n");
+             String add = sc.nextLine();
+             char ch = 'O';
+             switch(ch)
+             {
+                 case 'y':
+                 genre.addBooks();
+
+             }
+
+
+
 
          }
         
@@ -46,6 +58,8 @@ public class LibraryManagement {
 
              if (aut.equals(d)){
                  Authors.getBooksByAuthor1();
+                 String addordel = sc.nextLine();
+                 
              }
 
              else if (aut.equals(e)){
