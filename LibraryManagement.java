@@ -40,7 +40,11 @@ public class LibraryManagement {
              switch(ch)
              {
                  case 'y':
-                 genre.addBooks();
+                 System.out.println("add your books in order");
+                 
+
+                 genre.addBooks();//write method for adding new books which goes to arraylist as per genre
+
 
              }
 
