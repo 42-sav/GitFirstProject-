@@ -87,57 +87,57 @@ public class Genre {
         }catch(Exception e){
             System.out.println("unknown error");
         }
+    }
 
         
-
-        
-
-        
-      }
+      
 
     public void addBooks() {
         Scanner nb = new Scanner(System.in);
         System.out.println("Enter the no of books that you want to add :");
-        String[] string  = new String[nb.nextInt()];
+        //String[] string  = new String[nb.nextInt()];
+        int nob = nb.nextInt();
 
         //Cnb.nextLine();
-        for(int i =0;i<=string.length;i++)
+        for(int i =0;i<=nob;i++)
         {
             String book = nb.nextLine();
+            System.out.println("Confirm the  genre in which this book belongs");            
+            String gen = nb.nextLine();
 
-            String reg ="a";
-            switch (reg){
+            //String reg ="a";
+            switch(gen){
                 case "Thriller":
-                    stringList1.add(book);
-                    break;
+                stringList1.add(book);
+                break;
 
                 case "Comic":
-                    stringList2.add(book);
-                    break;
+                stringList2.add(book);
+                break;
 
                 case "Drama":
-                    stringList3.add(book);
-                    break;
+                stringList3.add(book);
+                break;
 
                 case "Mystery":
-                    stringList4.add(book);
-                    break;
+                stringList4.add(book);
+                break;
 
                 default:
-                    stringList5.add(book);
+                stringList5.add(book);
+
             }
+        }
+
+    }
+
+}
+            
+     
             
                  
 
              
 
-    }
-
-              
-        
-
-    }
-
-
     
-}
+

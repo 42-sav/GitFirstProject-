@@ -25,7 +25,7 @@ public class LibraryManagement {
          System.out.println("  *Authors");
          System.out.println("  *Year of Publication");
 
-         public static final Scanner sc= new Scanner(System.in);
+          Scanner sc= new Scanner(System.in);
 
          String str= sc.nextLine(); //reads input
 
@@ -37,26 +37,30 @@ public class LibraryManagement {
              genre.getStringList();
              //String test1 = sc.nextLine();
              System.out.println("Do you want to add  books to this genre:type y or n");
-             
-            
+             genre.addBooks();
              String add = sc.nextLine();
              
-             switch(add)
-             {
-                 case "y":
-                 System.out.println("add your books in order");
+             try{
+                
+             
+                System.out.println("add your books in order");
+                //not able to execute this line somehowGenre
 
 
-                 genre.addBooks();
+                 //genre.addBooks();
                  //write method for adding new books which goes to arraylist as per genre
-                 break;
+             }finally{
+                System.out.println("Books added to the store");
+              }
+                 
+                 
 
              }
 
 
 
 
-         }
+         
         
 
          else if(str.equals(b)){
