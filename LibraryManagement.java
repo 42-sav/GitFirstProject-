@@ -25,26 +25,31 @@ public class LibraryManagement {
          System.out.println("  *Authors");
          System.out.println("  *Year of Publication");
 
-         Scanner sc= new Scanner(System.in);
+         public static final Scanner sc= new Scanner(System.in);
 
          String str= sc.nextLine(); //reads input
 
          if(str.equals(a)){
              Genre genre = new Genre();
              genre.list();
+             //String test = sc.nextLine();
 
              genre.getStringList();
+             //String test1 = sc.nextLine();
              System.out.println("Do you want to add  books to this genre:type y or n");
+             
+            
              String add = sc.nextLine();
-             char ch = 'O';
-             switch(ch)
+             
+             switch(add)
              {
-                 case 'y':
+                 case "y":
                  System.out.println("add your books in order");
-                 
 
-                 genre.addBooks();//write method for adding new books which goes to arraylist as per genre
 
+                 genre.addBooks();
+                 //write method for adding new books which goes to arraylist as per genre
+                 break;
 
              }
 

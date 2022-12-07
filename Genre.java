@@ -17,9 +17,9 @@ public class Genre {
         System.out.println("Crime");
 
 
-    }
-    Scanner ec= new Scanner(System.in);
-    String ip= ec.nextLine();
+           }
+    //Scanner ec= new Scanner(System.in);
+    //String ip= ec.nextLine();
 
       public final ArrayList<String> stringList1 = new ArrayList<>();
       public final ArrayList<String> stringList2 = new ArrayList<>();
@@ -28,7 +28,8 @@ public class Genre {
       public final ArrayList<String> stringList5 = new ArrayList<>();
 
       public void getStringList() {
-        try (Scanner ec = new Scanner(System.in)) {
+        try  {
+            Scanner ec = new Scanner(System.in);
             String ip= ec.nextLine();
             
             if (ip.equals(a)){
@@ -38,6 +39,7 @@ public class Genre {
 
                 
                 System.out.println(stringList1);
+                //return;
             }
             
 
@@ -81,7 +83,12 @@ public class Genre {
                 System.out.println("The list is Empty");
 
             }
+            ec.close();
+        }catch(Exception e){
+            System.out.println("unknown error");
         }
+
+        
 
         
 
@@ -90,17 +97,16 @@ public class Genre {
 
     public void addBooks() {
         Scanner nb = new Scanner(System.in);
-        System.out.print("Please enter the number of Books you want to add: ");
-         //takes an integer input         
-        String string[] = new String [nb.nextInt()];
+        System.out.println("Enter the no of books that you want to add :");
+        String[] string  = new String[nb.nextInt()];
 
-        nb.nextLine();
-        for(int i =0;i<=string.length;i++){
+        //Cnb.nextLine();
+        for(int i =0;i<=string.length;i++)
+        {
             String book = nb.nextLine();
 
             String reg ="a";
-            switch (reg)
-             {
+            switch (reg){
                 case "Thriller":
                     stringList1.add(book);
                     break;
@@ -119,10 +125,13 @@ public class Genre {
 
                 default:
                     stringList5.add(book);
-
             }
+            
+                 
 
-        }
+             
+
+    }
 
               
         
