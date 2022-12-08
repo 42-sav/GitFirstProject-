@@ -18,7 +18,7 @@ public class Genre {
 
 
            }
-    //Scanner ec= new Scanner(System.in);
+    public static final Scanner ec= new Scanner(System.in);
     //String ip= ec.nextLine();
 
       public final ArrayList<String> stringList1 = new ArrayList<>();
@@ -29,7 +29,7 @@ public class Genre {
 
       public void getStringList() {
         try  {
-            Scanner ec = new Scanner(System.in);
+            //Scanner ec = new Scanner(System.in);
             String ip= ec.nextLine();
             
             if (ip.equals(a)){
@@ -83,7 +83,7 @@ public class Genre {
                 System.out.println("The list is Empty");
 
             }
-            ec.close();
+            //ec.close();
         }catch(Exception e){
             System.out.println("unknown error");
         }
@@ -93,17 +93,19 @@ public class Genre {
       
 
     public void addBooks() {
-        Scanner nb = new Scanner(System.in);
+        //Scanner nb = new Scanner(System.in);
         System.out.println("Enter the no of books that you want to add :");
         //String[] string  = new String[nb.nextInt()];
-        int nob = nb.nextInt();
+        //int nob = nb.nextInt();
+        String nextIntString = ec.nextLine(); //get the number as a single line
+        int nob = Integer.parseInt(nextIntString);
 
         //Cnb.nextLine();
-        for(int i =0;i<=nob;i++)
+        for(int i =0;i<nob;i++)
         {
-            String book = nb.nextLine();
+            String book = ec.nextLine();
             System.out.println("Confirm the  genre in which this book belongs");            
-            String gen = nb.nextLine();
+            String gen = ec.nextLine();
 
             //String reg ="a";
             switch(gen){
@@ -129,6 +131,12 @@ public class Genre {
             }
         }
 
+    }
+
+
+
+
+    public void delBooks() {
     }
 
 }

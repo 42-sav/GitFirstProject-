@@ -25,33 +25,60 @@ public class LibraryManagement {
          System.out.println("  *Authors");
          System.out.println("  *Year of Publication");
 
-          Scanner sc= new Scanner(System.in);
 
-         String str= sc.nextLine(); //reads input
+         // Scanner sc= new Scanner(System.in);
+
+         //String str= sc.nextLine(); //reads input
+         String str = Genre.ec.nextLine();
 
          if(str.equals(a)){
              Genre genre = new Genre();
              genre.list();
              //String test = sc.nextLine();
+             System.out.println("select the genre to view the books");
 
              genre.getStringList();
              //String test1 = sc.nextLine();
-             System.out.println("Do you want to add  books to this genre:type y or n");
-             genre.addBooks();
-             String add = sc.nextLine();
+             System.out.println("Do you want to add or delete books for this genre:type add or del");
+             //String test2 = sc.nextLine();
+             String test = Genre.ec.nextLine();
              
-             try{
+                switch(test){
+                    case "add":
+                    genre.addBooks();
+                    System.out.println("Books added to the store");
+                    break;
+
+                    case "del":
+                    genre.delBooks();
+
+                    default:
+                    return;
+                }
+
+                    //genre.addBooks();
+                    //String add = Genre.ec.nextLine();
+                   
                 
+                   //System.out.println("add your books in order");
+                   //not able to execute this line somehowGenre
+   
+   
+                    //genre.addBooks();
+                    //write method for adding new books which goes to arraylist as per genre
+                
+
+            
+
+                
+                
+                
+
+
+
+
              
-                System.out.println("add your books in order");
-                //not able to execute this line somehowGenre
-
-
-                 //genre.addBooks();
-                 //write method for adding new books which goes to arraylist as per genre
-             }finally{
-                System.out.println("Books added to the store");
-              }
+             
                  
                  
 
@@ -67,11 +94,11 @@ public class LibraryManagement {
              Authors authors = new Authors();
              authors.list();
 
-             String aut= sc.nextLine();
+             String aut= Genre.ec.nextLine();
 
              if (aut.equals(d)){
                  Authors.getBooksByAuthor1();
-                 String addordel = sc.nextLine();
+                 String addordel = Genre.ec.nextLine();
                  
              }
 
@@ -108,7 +135,7 @@ public class LibraryManagement {
         else {
              System.out.println("Invalid Entry,Retry");
          }
-         sc.close();
+         
 
          }
 
