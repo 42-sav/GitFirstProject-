@@ -137,6 +137,75 @@ public class Genre {
 
 
     public void delBooks() {
+        System.out.println("Confirm the genre from which you want to delete a book");
+        list();
+        String inp1 = ec.nextLine();
+
+        switch(inp1){
+            case "Thriller":
+            System.out.println(stringList1);
+            System.out.println("select the no of books you want to delete from this list");
+
+            String nextIntString2 = ec.nextLine(); //get the number as a single line
+            int nob2 = Integer.parseInt(nextIntString2);
+            for (int i=0;i<nob2;i++){
+                String inp2 = ec.nextLine();
+                stringList1.remove(inp2);
+            }
+            break;
+
+            case "Comic":
+            System.out.println(stringList2);
+            System.out.println("select the no of books you want to delete from this list");
+
+            String nextIntString3 = ec.nextLine(); //get the number as a single line
+            int nob3 = Integer.parseInt(nextIntString3);
+            for (int i=0;i<nob3;i++){
+                String inp3= ec.nextLine();
+                stringList2.remove(inp3);
+            }
+            break;
+
+            case "Drama":
+            System.out.println(stringList3);
+            System.out.println("select the no of books you want to delete from this list");
+
+            String nextIntString4= ec.nextLine(); //get the number as a single line
+            int nob4 = Integer.parseInt(nextIntString4);
+            for (int i=0;i<nob4;i++){
+                String inp4 = ec.nextLine();
+                stringList3.remove(inp4);
+            }
+            break;
+
+            case "Mystery":
+            System.out.println(stringList4);
+            System.out.println("select the no of books you want to delete from this list");
+
+            String nextIntString5 = ec.nextLine(); //get the number as a single line
+            int nob5 = Integer.parseInt(nextIntString5);
+            for (int i=0;i<nob5;i++){
+                String inp5 = ec.nextLine();
+                stringList4.remove(inp5);
+            }
+            break;
+
+            default:
+            System.out.println(stringList5);
+            System.out.println("select the no of books you want to delete from this list");
+
+            String nextIntString6 = ec.nextLine(); //get the number as a single line
+            int nob6 = Integer.parseInt(nextIntString6);
+            for (int i=0;i<nob6;i++){
+                String inp6 = ec.nextLine();
+                stringList5.remove(inp6);
+            }
+
+
+            
+
+        }
+
     }
 
 }
