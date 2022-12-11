@@ -7,7 +7,7 @@ public class Genre {
     String c = "Drama";
     String d = "Mystery";
     String e = "Crime";
-    
+    book book= new book();
 
     public void list() {
         System.out.println("Thriller");
@@ -21,21 +21,37 @@ public class Genre {
     public static final Scanner ec= new Scanner(System.in);
     //String ip= ec.nextLine();
 
-      public final ArrayList<String> stringList1 = new ArrayList<>();
-      public final ArrayList<String> stringList2 = new ArrayList<>();
-      public final ArrayList<String> stringList3 = new ArrayList<>();
-      public final ArrayList<String> stringList4 = new ArrayList<>();
-      public final ArrayList<String> stringList5 = new ArrayList<>();
+      public final static ArrayList<String> stringList1 = new ArrayList<>();
+      public final static ArrayList<String> stringList2 = new ArrayList<>();
+      public final static ArrayList<String> stringList3 = new ArrayList<>();
+      public final static ArrayList<String> stringList4 = new ArrayList<>();
+      public final static ArrayList<String> stringList5 = new ArrayList<>();
 
+     static{
+        stringList1.add("The Guest List");
+        stringList1.add("Gone Girl");
+        stringList1.add("Batman");
+        stringList2.add("Dragon ball z");
+        stringList2.add("Berserk");
+        stringList2.add("Naruto");
+        stringList3.add("Romeo ");
+        stringList3.add("Hamlet");
+        stringList3.add("Vaale");
+        stringList4.add("Sherlock");
+        stringList4.add("The girl on a Train");
+        stringList4.add("In the Woods");
+        stringList5.add("The Silent Patient");
+        stringList5.add("I will be gone in dark");
+        stringList5.add("Zn Cold Blood");
+
+     } 
       public void getStringList() {
         try  {
             //Scanner ec = new Scanner(System.in);
             String ip= ec.nextLine();
             
             if (ip.equals(a)){
-                stringList1.add("The guest List");
-                stringList1.add("Gone Girl");
-                stringList1.add("Batman");
+                
 
                 
                 System.out.println(stringList1);
@@ -44,36 +60,27 @@ public class Genre {
             
 
             else if (ip.equals(b)){
-                stringList2.add("Dragon ball z");
-                stringList2.add("Berserk");
-                stringList2.add("Naruto");
+                
 
                 System.out.println(stringList2);
 
             }
 
             else if (ip.equals(c)){
-                stringList3.add("Romeo ");
-                stringList3.add("Hamlet");
-                stringList3.add("Vaale");
+                
 
                 System.out.println(stringList3);
 
             }
 
             else if (ip.equals(d)){
-                stringList4.add("Sherlock");
-                stringList4.add("The girl on a Train");
-                stringList4.add("In the Woods");
-
+                
                 System.out.println(stringList4);
 
             }
 
             else if (ip.equals(e)){
-                stringList5.add("The Silent Patient");
-                stringList5.add("I will be gone in dark");
-                stringList5.add("Zn Cold Blood");
+                
 
                 System.out.println(stringList5);
 
@@ -97,7 +104,7 @@ public class Genre {
         System.out.println("Enter the no of books that you want to add :");
         //String[] string  = new String[nb.nextInt()];
         //int nob = nb.nextInt();
-        String nextIntString = ec.nextLine(); //get the number as a single line
+        String nextIntString = ec.nextLine(); //get the number as a single line this can reduced by taking int input
         int nob = Integer.parseInt(nextIntString);
 
         //Cnb.nextLine();
@@ -108,6 +115,9 @@ public class Genre {
             String gen = ec.nextLine();
 
             //String reg ="a";
+            //String nm=Genre.ec.nextLine();
+            //int qu=Genre.ec.nextInt();
+
             switch(gen){
                 case "Thriller":
                 stringList1.add(book);
@@ -136,6 +146,15 @@ public class Genre {
 
 
 
+
+
+
+
+    
+
+
+
+
     public void delBooks() {
         System.out.println("Confirm the genre from which you want to delete a book");
         list();
@@ -151,7 +170,10 @@ public class Genre {
             for (int i=0;i<nob2;i++){
                 String inp2 = ec.nextLine();
                 stringList1.remove(inp2);
+                System.out.println("the book has been deleted");
             }
+            System.out.println(stringList1);
+            //System.out.println("the book has been deleted");
             break;
 
             case "Comic":
@@ -163,7 +185,10 @@ public class Genre {
             for (int i=0;i<nob3;i++){
                 String inp3= ec.nextLine();
                 stringList2.remove(inp3);
+                System.out.println("the book has been deleted");
             }
+            System.out.println(stringList2);
+            
             break;
 
             case "Drama":
@@ -175,7 +200,10 @@ public class Genre {
             for (int i=0;i<nob4;i++){
                 String inp4 = ec.nextLine();
                 stringList3.remove(inp4);
+                System.out.println("the book has been deleted");
             }
+            System.out.println(stringList3);
+            
             break;
 
             case "Mystery":
@@ -187,7 +215,10 @@ public class Genre {
             for (int i=0;i<nob5;i++){
                 String inp5 = ec.nextLine();
                 stringList4.remove(inp5);
+                System.out.println("the book has been deleted");
             }
+            System.out.println(stringList4);
+            
             break;
 
             default:
@@ -199,7 +230,10 @@ public class Genre {
             for (int i=0;i<nob6;i++){
                 String inp6 = ec.nextLine();
                 stringList5.remove(inp6);
+                System.out.println("the book has been deleted");
             }
+            System.out.println(stringList5);
+            
 
 
             

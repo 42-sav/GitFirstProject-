@@ -27,6 +27,7 @@ public class LibraryManagement {
 
 
          // Scanner sc= new Scanner(System.in);
+         
 
          //String str= sc.nextLine(); //reads input
          String str = Genre.ec.nextLine();
@@ -34,13 +35,10 @@ public class LibraryManagement {
          if(str.equals(a)){
              Genre genre = new Genre();
              genre.list();
-             //String test = sc.nextLine();
              System.out.println("select the genre to view the books");
 
              genre.getStringList();
-             //String test1 = sc.nextLine();
              System.out.println("Do you want to add or delete books for this genre:type add or del");
-             //String test2 = sc.nextLine();
              String test = Genre.ec.nextLine();
              
                 switch(test){
@@ -56,39 +54,8 @@ public class LibraryManagement {
                     return;
                 }
 
-                    //genre.addBooks();
-                    //String add = Genre.ec.nextLine();
-                   
-                
-                   //System.out.println("add your books in order");
-                   //not able to execute this line somehowGenre
-   
-   
-                    //genre.addBooks();
-                    //write method for adding new books which goes to arraylist as per genre
-                
-
-            
-
-                
-                
-                
-
-
-
-
-             
-             
-                 
-                 
-
              }
 
-
-
-
-         
-        
 
          else if(str.equals(b)){
              Authors authors = new Authors();
@@ -128,6 +95,21 @@ public class LibraryManagement {
             yop.list();
 
             yop.getStringList();
+            System.out.println("Do you want to add or delete books for this genre:type add or del");
+             String test = Genre.ec.nextLine();
+             
+                switch(test){
+                    case "add":
+                    yop.addBooks();
+                    System.out.println("Books added to the store");
+                    break;
+
+                    case "del":
+                    yop.delBooks();
+
+                    default:
+                    return;
+                }
 
 
                    }

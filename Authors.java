@@ -3,6 +3,11 @@ import java.util.*;
 public class Authors {
 
     static Map<String, List<String>> map = new HashMap<String, List<String>>();
+    public static List<String> books1 = new ArrayList<String>();
+    public static List<String> books2 = new ArrayList<String>();
+    public static List<String> books3 = new ArrayList<String>();
+    public static List<String> books4 = new ArrayList<String>();
+    public static List<String> books5 = new ArrayList<String>();
     
     public void list() {
         System.out.println("Mark Mason");
@@ -15,7 +20,7 @@ public class Authors {
     }
     public static  void getBooksByAuthor1(){
     
-    List<String> books1 = new ArrayList<String>();
+    
     books1.add("Love Is Not Enough");
     books1.add("The Subtle Art of Not Giving a fuck");
     books1.add("will");
@@ -33,7 +38,7 @@ public class Authors {
 
     public static void getBooksByAuthor2(){
     
-    List<String> books2 = new ArrayList<String>();
+    
     books2.add("DA VINCI CODE");
     books2.add("Inferno");
     books2.add("Origin");
@@ -48,7 +53,7 @@ public class Authors {
     }
 
     public static void getBooksByAuthor3(){
-        List<String> books3 = new ArrayList<String>();
+        
         books3.add("The Power of Unwavering");
         map.put("key3",books3);
     
@@ -60,7 +65,7 @@ public class Authors {
         }
 
         public static void getBooksByAuthor4(){
-            List<String> books4 = new ArrayList<String>();
+            
             books4.add("Berserk");
             map.put("key4",books4);
         
@@ -73,7 +78,7 @@ public class Authors {
 
 
             public static void getBooksByAuthor5(){
-                List<String> books5 = new ArrayList<String>();
+                
                 books5.add("The Power of Unwavering");
                 map.put("key3",books5);
             
