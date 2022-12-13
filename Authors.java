@@ -9,7 +9,7 @@ public class Authors {
     public static List<String> books4 = new ArrayList<String>();
     public static List<String> books5 = new ArrayList<String>();
     
-    public void list() {
+    public static void list() {
         System.out.println("Mark Mason");
         System.out.println("Dan Brown");
         System.out.println("Dandapani");
@@ -88,6 +88,100 @@ public class Authors {
                 System.out.println(listbook);
             
                 }
+
+            public static void addorDel(){
+                System.out.println("Do you want to add or delete books from authors:type add or del");
+                String test1 = Genre.ec.nextLine();
+                if (test1 =="add"){
+                    list();
+                    System.out.println("enter the no of books you want to add");
+                    String nextIntString = Genre.ec.nextLine(); //get the number as a single line this can reduced by taking int input
+                    int nob = Integer.parseInt(nextIntString);
+                    for(int i =0;i<nob;i++)
+                            {
+                        System.out.println("enter the name of the book you want to add");
+                        String book = Genre.ec.nextLine();
+                        System.out.println("Confirm the  Author to which this book belongs");            
+                        String gen = Genre.ec.nextLine();
+
+
+                        switch(gen){
+                            case "Mark Mason":
+                                books1.add(book);
+                                break;
+
+                            case "Dan Brown":
+                               books2.add(book);
+                                break;
+
+                            case "Dandapani":
+                                books3.add(book);
+                                break;
+
+                            case "Kentaro Muira":
+                                books4.add(book);
+                                break;
+
+                            default:
+                                books5.add(book);
+
+
+                    }
+
+
+
+                }
+            }
+
+            else if(test1=="del"){
+                list();
+                System.out.println("enter the no of books you want to delete");
+                String nextIntString = Genre.ec.nextLine(); //get the number as a single line this can reduced by taking int input
+                    int nob = Integer.parseInt(nextIntString);
+                    for(int i =0;i<nob;i++)
+                            {
+                        System.out.println("enter the name of the book you want to delete");
+                        String book = Genre.ec.nextLine();
+                        System.out.println("Confirm the  Author to which this book belongs");            
+                        String gen = Genre.ec.nextLine();
+
+
+                        switch(gen){
+                            case "Mark Mason":
+                                books1.remove(book);
+                                break;
+
+                            case "Dan Brown":
+                               books2.remove(book);
+                                break;
+
+                            case "Dandapani":
+                                books3.remove(book);
+                                break;
+
+                            case "Kentaro Muira":
+                                books4.remove(book);
+                                break;
+
+                            default:
+                                books5.remove(book);
+
+
+                    }
+
+
+
+                }
+
+            }
+
+
+
+                
+
+
+                return ;
+            }
 
     
 }
